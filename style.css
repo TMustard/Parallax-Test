@@ -11,6 +11,11 @@
     max-width: 70%;
 }
 
+.lorem-wrapper {
+    margin-top: -11rem;
+    background-color: white;
+}
+
 
 #landing-bg {
     background-image: url("landing-background.jpg");
@@ -22,7 +27,7 @@
     top: -33vh;
     width: 100vw;
     height: 100vw;
-    z-index: -1;
+    z-index: -2;
     /* opacity: .75; */
 }
 
@@ -69,3 +74,18 @@
     background-color: #4CAF50;
     color: white;
 }
+
+.sticky {
+    position:fixed;
+    top:0;
+  }
+
+  #readout {
+    /* background-color: white; */
+    position: fixed;
+    /* z-index: 100; */
+    bottom: 0;
+    right: 0;
+    /* width: 200px; */
+    /* height: 50px; */
+  }
