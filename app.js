@@ -1,6 +1,5 @@
 var landingBackground = document.querySelector("#landing-bg");
 var navBar = document.querySelector(".topnav");
-// var stickyDiv = "sticky";
 // var landingTop = document.querySelector(".landing-wrapper");
 var fixed = false;
 var fixPoint = getDistance();
@@ -9,11 +8,11 @@ var fixPoint = getDistance();
 var yScrollPosition;
 
 function getDistance() {
-  var topDist = navBar.offsetTop;
-  return topDist;
+  var topDistance = navBar.offsetTop;
+  return topDistance;
 }
 
-window.onscroll = function(e) {
+window.onscroll =  function() {
   var distance = getDistance() - window.pageYOffset;
   var offset = window.pageYOffset;
   // readout.innerHTML = fixPoint + "   " + distance + "   " + offset + "   " + fixed;
@@ -23,13 +22,12 @@ window.onscroll = function(e) {
     fixed = true;
   } else if (fixed && (offset <= fixPoint)){
     navBar.style.position = "relative";
-    navBar.style.top = "-25vh";
+    navBar.style.top = "-29.5vh";
+    // navBar.style.top = "-14rem";
     fixed = false;
     
   }
 };
-
-
 
 function setTranslate(xPos, yPos, el) {
   el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
@@ -43,13 +41,3 @@ function scrollLoop() {
   requestAnimationFrame(scrollLoop);
 }
 
-// window.onscroll = function () {
-//   console.log("1");
-//   if (win.scrollTop() > landingTop.height()) {
-//     console.log("hit");
-//     yourNavigation.addClass(stickyDiv);
-//   } else {
-//     yourNavigation.removeClass(stickyDiv);
-//     console.log("yo");
-//   }
-// };
